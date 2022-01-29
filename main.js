@@ -2,10 +2,15 @@
 const teclas = document.querySelectorAll('.tecla');
 
 function tocar(idAudio) {
-    document.querySelector(idAudio).play();
+    const elemento = document.querySelector(idAudio);
+
+    // Validação para funcionar apenas com seletores 'audio'
+    if (elemento && elemento.localName === 'audio') {
+        elemento.play();
+    }else {
+        console.log('Elemento não encontrado ou Seletor inválido');
+    }
 }
-
-
 
 for (let contador = 0; contador < teclas.length; contador++) {
     const teclaNaPosicao = teclas[contador];
