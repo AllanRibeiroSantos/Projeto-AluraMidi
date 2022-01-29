@@ -5,9 +5,9 @@ function tocar(idAudio) {
     document.querySelector(idAudio).play();
 }
 
-let contador = 0;
 
-while (contador < teclas.length) {
+
+for (let contador = 0; contador < teclas.length; contador++) {
     const teclaNaPosicao = teclas[contador];
     const sufixoTeclas = teclaNaPosicao.classList[1];
 
@@ -15,14 +15,14 @@ while (contador < teclas.length) {
         tocar(`#som_${sufixoTeclas}`);
     };
 
-    teclaNaPosicao.onkeydown = function() {
-        teclaNaPosicao.classList.add('ativa');
-    };
+    teclaNaPosicao.onkeydown = function(event) {
+        // Se você der um console.log(event) você conseguirá saber qual code é a tecla pressionada, podendo escreve-la como comparativo abaixo
+        if (event.code === 'Space' || event.code === 'Enter') {
+            teclaNaPosicao.classList.add('ativa');
+        }
+    }
 
     teclaNaPosicao.onkeyup = function() {
         teclaNaPosicao.classList.remove('ativa');
-    };
-
-    console.log(contador);
-    contador++;
+    }
 }
