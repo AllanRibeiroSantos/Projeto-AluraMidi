@@ -8,10 +8,21 @@ function tocar(idAudio) {
 let contador = 0;
 
 while (contador < teclas.length) {
-    const sufixoTeclas = teclas[contador].classList[1];
-    teclas[contador].onclick = function () {
+    const teclaNaPosicao = teclas[contador];
+    const sufixoTeclas = teclaNaPosicao.classList[1];
+
+    teclaNaPosicao.onclick = function () {
         tocar(`#som_${sufixoTeclas}`);
     };
+
+    teclaNaPosicao.onkeydown = function() {
+        teclaNaPosicao.classList.add('ativa');
+    };
+
+    teclaNaPosicao.onkeyup = function() {
+        teclaNaPosicao.classList.remove('ativa');
+    };
+
     console.log(contador);
     contador++;
 }
