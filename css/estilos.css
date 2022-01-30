@@ -2,12 +2,11 @@
   --tecla: #e93d50;
   --corDeFundo--botao: rgba(34, 34, 34, 0.7);
   --corDeFundo--botao-hover: #333;
-  --corDeFundo2: rgb(54, 52, 52);
+  --corDeFundo2: rgb(40, 40, 40);
   --corDeFundo3: rgba(54, 52, 52, 0.5);
   --corFonte: #fff;
   --luz: rgb(255, 0, 0);
   --luzTecla: rgba(231, 18, 18, 0.5);
-
 }
 
 body {
@@ -18,15 +17,28 @@ body {
 
 main {
   align-items: center;
-  background: blue;
+  background: linear-gradient(45deg, #a7cfdf 0%,#23538a 100%);
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .controlador {
-  background-color: black;
+  background-color: var(--corDeFundo2);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 5px solid #333;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.controlador__logoAlura {
+  align-self: flex-end;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .teclado {
@@ -36,6 +48,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  margin-top: 1rem;
 }
 
 .teclado__container:not(:last-child) {
