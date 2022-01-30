@@ -18,21 +18,29 @@
 </head>
 <body>
 
-    <h1>Alura Midi</h1>
-
-    <section class="teclado">
-        <button class="tecla tecla_pom">Pom</button>
-        <button class="tecla tecla_clap">Clap</button>
-        <button class="tecla tecla_tim">Tim</button>
-
-        <button class="tecla tecla_puff">Puff</button>
-        <button class="tecla tecla_splash">Splash</button>
-        <button class="tecla tecla_toim">Toim</button>
-
-        <button class="tecla tecla_psh">Psh</button>
-        <button class="tecla tecla_tic">Tic</button>
-        <button class="tecla tecla_tom">Tom</button>
-    </section>
+    <main>
+        <div class="controlador">
+            <section class="teclado">
+                <div class="teclado__container teclado--espaco">
+                    <button class="tecla tecla_pom">Pom</button>
+                    <button class="tecla tecla_clap">Clap</button>
+                    <button class="tecla tecla_tim">Tim</button>
+                </div>
+                <div class="teclado__container teclado--espaco">
+                    <button class="tecla tecla_puff">Puff</button>
+                    <button class="tecla tecla_splash">Splash</button>
+                    <button class="tecla tecla_toim">Toim</button>
+                </div>
+                <div class="teclado__container teclado--espaco">
+                    <button class="tecla tecla_psh">Psh</button>
+                    <button class="tecla tecla_tic">Tic</button>
+                    <button class="tecla tecla_tom">Tom</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    
 
     <audio src="sounds/keyq.wav" id="som_tecla_pom"></audio>
     <audio src="sounds/keyw.wav" id="som_tecla_clap"></audio>
